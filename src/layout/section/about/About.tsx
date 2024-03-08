@@ -7,6 +7,8 @@ import {StyledButton} from "../../../components/Button";
 import {Movement} from "../../../components/movement/Movement";
 import { Container } from '../../../components/Container';
 import {theme} from "../../../styles/Theme";
+import dotsGroup from "../../../assets/images/bgElements/dots-group.svg";
+import dots from "../../../assets/images/bgElements/dots.svg";
 
 export const About = () => {
     return (
@@ -43,7 +45,35 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
+  overflow-x: hidden;
   
+  position: relative;
+  z-index: 0;
+  
+  &::before {
+    content: "";
+    width: 155px;
+    height: 155px;
+    border: 1px solid ${theme.colors.secondaryColor};
+
+    position: absolute;
+    left: -77px;
+    top: 188px;
+    z-index: -1;
+  }
+  
+  &::after {
+    content: "";
+    width: 103px;
+    height: 103px;
+    background-image: url(${dots});
+    background-size: cover;
+
+    position: absolute;
+    right: -23px;
+    bottom: 156px;
+    z-index: -1;
+  }
 `
 
 const Description = styled.div`
@@ -61,16 +91,25 @@ const Description = styled.div`
 
 const PhotoWrapper = styled.div`
   position: relative;
+  z-index: 0;
+  
+  &::after {
+    content: url(${dotsGroup});
+    position: absolute;
+    top: 59px;
+    left: -4px;
+    z-index: 1;
+  }
   
   &::before {
     content: "";
     width: 271px;
     height: 1px;
     background-color: ${theme.colors.accent};
-    
+
     position: absolute;
     left: 44px;
-    bottom: 0;
+    bottom: 2px;
   }
 `
 

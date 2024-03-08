@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import { Social } from '../../../components/social/Social';
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import dots from "../../../assets/images/bgElements/dots.svg"
 
 export const Contacts = () => {
     return (
@@ -18,13 +19,9 @@ export const Contacts = () => {
                     </Description>
                     <MessageBlock>
                         <Title>Message me here</Title>
-                        <FlexWrapper direction={"column"} gap={"15px"}>
-                            <a href={"#"}>
-                                <Social iconId={"telegram"} width={"23"} height={"23"} viewBox={"0 0 23 23"} text={"@Elias#3519"}/>
-                            </a>
-                            <a href={"#"}>
-                                <Social iconId={"email"} width={"23"} height={"17"} viewBox={"0 0 23 17"} text={"elias@elias.me"}/>
-                            </a>
+                        <FlexWrapper direction={"column"} gap={"8px"}>
+                            <Social iconId={"telegram"} width={"32"} height={"32"} viewBox={"0 0 32 32"} text={"@Elias#3519"}/>
+                            <Social iconId={"email"} width={"32"} height={"32"} viewBox={"0 0 32 32"} text={"elias@elias.me"}/>
                         </FlexWrapper>
                     </MessageBlock>
                 </FlexWrapper>
@@ -34,7 +31,23 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-  min-height: 30vh;
+  overflow-x: hidden;
+  
+  position: relative;
+  z-index: 0;
+  
+  &::after {
+    content: "";
+    width: 103px;
+    height: 103px;
+    background-image: url(${dots});
+    background-size: cover;
+
+    position: absolute;
+    left: -51px;
+    bottom: 85px;
+    z-index: -1;
+  }
 
 `
 
@@ -47,7 +60,7 @@ const Description = styled.p`
 `
 
 const MessageBlock = styled.div`
-  max-width: 204px;
+  max-width: 209px;
   width: 100%;
   padding: 16px;
   border: 1px solid ${theme.colors.secondaryColor};
@@ -58,3 +71,4 @@ const Title = styled.h4`
   font-size: 16px;
   margin-bottom: 16px;
 `
+

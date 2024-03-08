@@ -3,16 +3,15 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
-import {Icon} from "../../../components/icon/Icon";
 import {Container} from "../../../components/Container";
+import elementsBg from "../../../assets/images/skills/elements.svg"
 
 export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
                 <SectionTitle>skills</SectionTitle>
-                <FlexWrapper justify={"space-between"} align={"flex-start"}>
-                    <Icon iconId={"bg"} width={"349"} height={"283"} viewBox={"0 0 349 283"}/>
+                <FlexWrapper justify={"flex-end"} align={"flex-start"}>
                     <SkillsWrapper>
                         <Skill title={"Languages"} technologies={"TypeScript Lua Python JavaScript"} />
                         <Skill title={"Databases"} technologies={"SQLite PostgreSQL Mongo"} />
@@ -28,6 +27,13 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   padding: 54px 0;
+  
+  ${Container} {
+    background-image: url(${elementsBg});
+    background-repeat: no-repeat;
+    background-size: 349px, contain;
+    background-position: top 54px left 32px;
+  }
 `
 
 const SkillsWrapper = styled.div`

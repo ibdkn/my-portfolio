@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
-import {Icon} from "../../../components/icon/Icon";
+import quotes from "../../../assets/images/quote/quotes.svg";
 
 export const Quote = () => {
     return (
@@ -10,12 +10,6 @@ export const Quote = () => {
             <Container>
                 <BlockquoteWrapper>
                     <Blockquote>
-                        {/*<QuoteIcon>*/}
-                        {/*    <Icon iconId={'quote'} width={'42'} height={'29'} viewBox={"0 0 42 29"}/>*/}
-                        {/*</QuoteIcon>*/}
-                        {/*<QuoteIcon>*/}
-                        {/*    <Icon iconId={'quote'} width={'42'} height={'29'} viewBox={"0 0 42 29"}/>*/}
-                        {/*</QuoteIcon>*/}
                         <Text>
                             With great power comes great electricity bill
                         </Text>
@@ -32,6 +26,20 @@ export const Quote = () => {
 
 const StyledQuote = styled.section`
   padding-top: 0;
+  overflow-x: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 91px;
+    height: 91px;
+    border: 1px solid ${theme.colors.secondaryColor};
+    
+    position: absolute;
+    right: -9px;
+    top: 14px;
+    z-index: 1;
+  }
 `
 
 const BlockquoteWrapper = styled.div`
@@ -45,8 +53,38 @@ const Blockquote = styled.blockquote`
   flex-direction: column;
   align-items: flex-end;
   margin: 0 auto;
-  
+
   position: relative;
+
+  &::before {
+    content: "";
+    width: 42px;
+    height: 29px;
+    background-image: url(${quotes});
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: ${theme.colors.primaryBg};
+    
+    position: absolute;
+    top: -10px;
+    left: 19px;
+  }
+
+  &::after {
+    content: "";
+    width: 42px;
+    height: 29px;
+    background-image: url(${quotes});
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: ${theme.colors.primaryBg};
+    
+    position: absolute;
+    bottom: 53px;
+    right: 24px;
+  }
 `
 
 // const QuoteIcon = styled.div`

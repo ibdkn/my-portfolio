@@ -5,6 +5,7 @@ import {Logo} from "../../components/logo/Logo";
 import {Icon} from "../../components/icon/Icon";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/Theme";
+import { SocialLink } from '../../components/SocialLink';
 
 export const Footer = () => {
     return (
@@ -22,16 +23,16 @@ export const Footer = () => {
                     </Info>
                     <Media>
                         <MediaTitle>Media</MediaTitle>
-                        <FlexWrapper justify={"center"} align={"center"} gap={"20px"}>
+                        <FlexWrapper justify={"center"} align={"center"} gap={"8px"}>
                             <SocialLink href={"#"}>
-                                <Icon iconId={'github'} width={'21'} height={'20'} viewBox={"0 0 21 20"}/>
+                                <Icon iconId={'github'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
                             </SocialLink>
                             <SocialLink href={"#"}>
-                                <Icon iconId={'discord'} width={'20'} height={'20'} viewBox={"0 -1 25 20"}/>
+                                <Icon iconId={'discord'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
                             </SocialLink>
-                            <SocialLink href={"#"}>
-                                <Icon iconId={'instagram'} width={'20'} height={'20'} viewBox={"0 -2 20 20"}/>
-                            </SocialLink>
+                            {/*<SocialLink href={"#"}>*/}
+                            {/*    <Icon iconId={'instagram'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>*/}
+                            {/*</SocialLink>*/}
                         </FlexWrapper>
                     </Media>
                 </FlexWrapper>
@@ -48,14 +49,6 @@ const StyledFooter = styled.footer`
 
 const Info = styled.div`
   
-`
-
-const SocialLink = styled.a`
-  &:hover {
-    svg {
-      fill: ${theme.colors.primaryColor};
-    }
-  }
 `
 
 const WebsiteAddress = styled.span`

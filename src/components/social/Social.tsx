@@ -13,21 +13,27 @@ type SocialPropsType = {
 
 export const Social = (props: SocialPropsType) => {
     return (
-        <StyledSocial>
+        <StyledSocial href={"#"}>
             <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
             <Name>{props.text}</Name>
         </StyledSocial>
     );
 };
 
-const StyledSocial = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`
-
 const Name = styled.div`
   font-weight: 400;
   font-size: 16px;
   color: ${theme.colors.secondaryColor};
+`
+
+const StyledSocial = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ABB2BF;
+
+  &:hover,
+  &:hover ${Name} {
+    color: ${theme.colors.primaryColor};
+  }
 `

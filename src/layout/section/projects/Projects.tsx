@@ -8,6 +8,7 @@ import skillImage1 from '../../../assets/images/projects/skill-1.png'
 import skillImage2 from '../../../assets/images/projects/skill-2.png'
 import skillImage3 from '../../../assets/images/projects/skill-3.png'
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Projects = () => {
     return (
@@ -29,9 +30,25 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
   padding-bottom: 54px;
+  overflow-x: hidden;
+
+  position: relative;
+  z-index: 0;
   
   h2 {
     margin: 0;
+  }
+
+  &::before {
+    content: "";
+    width: 155px;
+    height: 155px;
+    border: 1px solid ${theme.colors.secondaryColor};
+
+    position: absolute;
+    right: -87px;
+    bottom: 147px;
+    z-index: -1;
   }
 `
 const ProjectsWrapper = styled.div`

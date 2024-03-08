@@ -7,6 +7,7 @@ import {Switch} from "../../components/switch/Switch";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/Theme";
 import {Icon} from "../../components/icon/Icon";
+import {SocialLink} from "../../components/SocialLink";
 
 const items = ["home", "projects", "skills", "about-me", "contacts"];
 
@@ -14,15 +15,15 @@ export const Header = () => {
     return (
         <StyledHeader>
             <SocialFixed>
-                <a href={"#"}>
-                    <Icon iconId={'github'} width={'21'} height={'20'} viewBox={"0 0 21 20"}/>
-                </a>
-                <a href={"#"}>
-                    <Icon iconId={'telegram'} width={'20'} height={'20'} viewBox={"0 0 23 23"}/>
-                </a>
-                <a href={"#"}>
-                    <Icon iconId={'instagram'} width={'20'} height={'20'} viewBox={"0 -2 20 20"}/>
-                </a>
+                <SocialLink href={"#"}>
+                    <Icon iconId={'github'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
+                </SocialLink>
+                <SocialLink href={"#"}>
+                    <Icon iconId={'telegram'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
+                </SocialLink>
+                {/*<SocialLink href={"#"}>*/}
+                {/*    <Icon iconId={'instagram'} width={'20'} height={'20'} viewBox={"0 -2 20 20"}/>*/}
+                {/*</SocialLink>*/}
             </SocialFixed>
             <Container>
                 <HeaderWrapper>
@@ -54,7 +55,7 @@ const SocialFixed = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 8px;
   
   &::before {
     content: "";

@@ -5,7 +5,8 @@ import photo from '../../../assets/images/main/main.png'
 import {StyledButton} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import { theme } from '../../../styles/Theme';
-import {Icon} from "../../../components/icon/Icon";
+import dots from "../../../assets/images/bgElements/dots.svg";
+import square from "../../../assets/images/bgElements/square.svg";
 
 export const Main = () => {
     return (
@@ -24,12 +25,6 @@ export const Main = () => {
                     <div>
                         <PhotoWrapper>
                             <Photo src={photo} alt=""/>
-                            <Rectangle>
-                                <Icon iconId={'mainRec'} width={'156'} height={'156'} viewBox={"0 0 156 156"}/>
-                            </Rectangle>
-                            <Dots>
-                                <Icon iconId={'dots'} width={'84'} height={'84'} viewBox={"0 0 84 84"}/>
-                            </Dots>
                         </PhotoWrapper>
                         <SubtextWrapper>
                             <Subtext>
@@ -76,6 +71,22 @@ const PhotoWrapper = styled.div`
   
   position: relative;
   z-index: 0;
+  
+  &::before {
+    content: url(${dots});
+    position: absolute;
+    bottom: 56px;
+    right: 16px;
+    z-index: 1;
+  }
+  
+  &::after {
+    content: url(${square});
+    position: absolute;
+    top: 84px;
+    left: -12px;
+    z-index: -1;
+  }
 `
 
 const Rectangle = styled.div`
