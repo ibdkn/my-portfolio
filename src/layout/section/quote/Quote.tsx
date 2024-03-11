@@ -25,7 +25,7 @@ export const Quote = () => {
 };
 
 const StyledQuote = styled.section`
-  padding-top: 0;
+  padding-top: 5px;
   overflow-x: hidden;
   position: relative;
 
