@@ -12,7 +12,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
+                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
                     <Info>
                         <MainTitle>
                             Elias is a <span>web designer</span> and <span>front-end developer</span>
@@ -42,6 +42,12 @@ const StyledMain = styled.section`
   position: relative;
   display: flex;
   min-height: 100vh;
+
+  @media screen and (max-width: 1035px) {
+    ${Container} > ${FlexWrapper} {
+      justify-content: center;
+    }
+  }
 `
 
 const Info = styled.div`
@@ -73,33 +79,53 @@ const PhotoWrapper = styled.div`
   z-index: 0;
   
   &::before {
-    content: url(${dots});
+    content: "";
+    width: 84px;
+    height: 84px;
+    background-image: url(${dots});
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     position: absolute;
     bottom: 56px;
     right: 16px;
     z-index: 1;
+
+    @media ${theme.media.mobile} {
+      width: 56px;
+      height: 56px;
+      
+      right: 11px;
+      bottom: 38px;
+    }
   }
   
   &::after {
-    content: url(${square});
+    content: "";
+    width: 155px;
+    height: 155px;
+    background-image: url(${square});
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     position: absolute;
     top: 84px;
     left: -12px;
     z-index: -1;
+
+    @media ${theme.media.mobile} {
+      width: 104px;
+      height: 104px;
+      
+      top: 57px;
+      left: -9px;
+    }
   }
-`
-
-const Rectangle = styled.div`
-  position: absolute;
-  top: 84px;
-  left: -12px;
-  z-index: -1;
-`
-
-const Dots = styled.div`
-  position: absolute;
-  right: 16px;
-  bottom: 56px;
+  
+  @media ${theme.media.mobile} {
+    width: 316px;
+    height: 260px;
+  }
 `
 
 const Photo = styled.img`
@@ -111,6 +137,10 @@ const Photo = styled.img`
 const SubtextWrapper = styled.div`
   padding: 8px 34px;
   border: 1px solid ${theme.colors.secondaryColor};
+
+  @media ${theme.media.mobile} {
+    max-width: 316px;
+  }
 `
 
 const Subtext = styled.p`
