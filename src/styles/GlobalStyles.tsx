@@ -23,6 +23,8 @@ export const GlobalStyles = createGlobalStyle `
     font-family: inherit;
     color: inherit;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
   
   body {
