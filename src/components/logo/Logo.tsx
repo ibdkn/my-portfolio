@@ -12,6 +12,8 @@ export const Logo = () => {
 };
 
 const StyledLogoWrapper = styled.a`
+  position: relative;
+  z-index: 999999999;
   display: flex;
   align-items: center;
   gap: 8px;

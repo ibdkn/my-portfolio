@@ -2,12 +2,11 @@ import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
-import {FlexWrapper} from "../../components/FlexWrapper";
-import {Switch} from "../../components/switch/Switch";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/Theme";
 import {Icon} from "../../components/icon/Icon";
 import {SocialLink} from "../../components/SocialLink";
+import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 const items = ["home", "projects", "skills", "about-me", "contacts"];
 
@@ -22,17 +21,14 @@ export const Header = () => {
                     <Icon iconId={'telegram'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
                 </SocialLink>
                 {/*<SocialLink href={"#"}>*/}
-                {/*    <Icon iconId={'instagram'} width={'20'} height={'20'} viewBox={"0 -2 20 20"}/>*/}
+                {/*    <Icon iconId={'instagram'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>*/}
                 {/*</SocialLink>*/}
             </SocialFixed>
             <Container>
                 <HeaderWrapper>
                     <Logo/>
-
-                    <FlexWrapper align={"center"} gap={"32px"}>
-                        <Menu menuItems={items}/>
-                        <Switch />
-                    </FlexWrapper>
+                    <Menu menuItems={items}/>
+                    <MobileMenu menuItems={items}/>
                 </HeaderWrapper>
             </Container>
         </StyledHeader>
@@ -68,6 +64,10 @@ const SocialFixed = styled.div`
     left: 50%;
     transform: translateX(-50%);
   }
+  
+  @media screen and (max-width: 1250px) {
+    display: none;
+  }
 `
 
 const HeaderWrapper = styled.div`
@@ -75,4 +75,8 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media ${theme.media.mobile} {
+    padding-top: 19px;
+  }
 `

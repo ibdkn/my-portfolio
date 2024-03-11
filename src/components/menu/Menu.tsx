@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { theme } from '../../styles/Theme';
+import {Switch} from "../switch/Switch";
 
 export const Menu = (props: {menuItems: Array<string>}) => {
     return (
@@ -13,15 +14,27 @@ export const Menu = (props: {menuItems: Array<string>}) => {
                         </ListItem>
                     )
                 })}
+                <li>
+                    <Switch />
+                </li>
             </ul>
         </StyledMenu>
     );
 };
 
 const StyledMenu = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  
   ul {
     display: flex;
-    gap: 42px;
+    align-items: center;
+    gap: 32px;
+  }
+
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `
 
