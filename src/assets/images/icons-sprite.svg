@@ -8,7 +8,7 @@
 
     <!-- switch arrow -->
     <g id="SwitchArrow">
-        <path d="M3.81 4.38 8 8.57l4.19-4.19 1.52 1.53L8 11.62 2.29 5.91l1.52-1.53z" fill="#acb2bf"/>
+        <path d="M3.81 4.38 8 8.57l4.19-4.19 1.52 1.53L8 11.62 2.29 5.91l1.52-1.53z" fill="currentColor"/>
     </g>
 
     <!-- main -->
