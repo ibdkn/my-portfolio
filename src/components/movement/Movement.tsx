@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {font} from "../../styles/Common";
 
 export const Movement = (props: { title: string }) => {
     return (
@@ -8,6 +9,5 @@ export const Movement = (props: { title: string }) => {
 };
 
 const MovementLink = styled.a`
-  font-weight: 500;
-  font-size: 16px;
+  ${font({weight: 500, Fmax: 16, Fmin: 14})};
 `
