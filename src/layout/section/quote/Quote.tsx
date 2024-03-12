@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import quotes from "../../../assets/images/quote/quotes.svg";
+import {font} from "../../../styles/Common";
 
 export const Quote = () => {
     return (
@@ -39,15 +40,20 @@ const StyledQuote = styled.section`
     right: -9px;
     top: 14px;
     z-index: 1;
+    
+    @media ${theme.media.desktop} {
+      display: none;
+    }
   }
 `
 
 const BlockquoteWrapper = styled.div`
-  //padding: 112px 0 74px;
+  
 `
 
 const Blockquote = styled.blockquote`
   max-width: 714px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -87,32 +93,20 @@ const Blockquote = styled.blockquote`
   }
 `
 
-// const QuoteIcon = styled.div`
-//   position: absolute;
-//   background-color: ${theme.colors.secondaryBg};
-//
-//   &:first-child {
-//     top: -14px;
-//     left: 11px;
-//   }
-//
-//   &:last-child {
-//     bottom: 0;
-//     right: 16px;
-//   }
-// `
-
 const Text = styled.p`
+  width: 100%;
   padding: 32px;
-  font-weight: 500;
-  font-size: 24px;
+  ${font({weight: 500, Fmax: 24, Fmin: 18})};
   border: 1px solid ${theme.colors.secondaryColor};
+
+  @media ${theme.media.tablet} {
+    font-size: 18px;
+  }
 `
 
 const Author = styled.footer`
   padding: 16px;
-  font-weight: 400;
-  font-size: 24px;
+  ${font({weight: 400, Fmax: 24, Fmin: 18})}
   border: 1px solid ${theme.colors.secondaryColor};
   border-top: none;
 `

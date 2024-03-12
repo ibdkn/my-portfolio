@@ -6,12 +6,13 @@ import {Icon} from "../../components/icon/Icon";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/Theme";
 import { SocialLink } from '../../components/SocialLink';
+import {font} from "../../styles/Common";
 
 export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper justify={"space-between"} align={"flex-start"}>
+                <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"} gap={"20px"}>
                     <Info>
                         <FlexWrapper align={"center"} gap={"24px"}>
                             <Logo/>
@@ -68,8 +69,7 @@ const Media = styled.div`
 `
 
 const MediaTitle = styled.h3`
-  font-weight: 500;
-  font-size: 24px;
+  ${font({weight: 500, Fmax: 24, Fmin: 18})};
   margin-bottom: 12px;
 `
 
@@ -79,5 +79,9 @@ const Copyright = styled.p`
   font-size: 16px;
   color: ${theme.colors.secondaryColor};
   text-align: center;
+  
+  @media ${theme.media.mobile} {
+    margin-top: 30px;
+  }
 `
 

@@ -60,6 +60,10 @@ const StyledAbout = styled.section`
     left: -77px;
     top: 188px;
     z-index: -1;
+    
+    @media ${theme.media.desktop} {
+      display: none;
+    }
   }
   
   &::after {
@@ -73,6 +77,18 @@ const StyledAbout = styled.section`
     right: -23px;
     bottom: 156px;
     z-index: -1;
+
+    @media ${theme.media.desktop} {
+      display: none;
+    }
+  }
+  
+  ${Container} > ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 20px;
+    }
   }
 `
 
@@ -94,11 +110,22 @@ const PhotoWrapper = styled.div`
   z-index: 0;
   
   &::after {
-    content: url(${dotsGroup});
+    content: "";
+    width: 327px;
+    height: 276px;
+    background-image: url(${dotsGroup});
+    background-size: cover;
     position: absolute;
     top: 59px;
     left: -4px;
     z-index: 1;
+
+    @media ${theme.media.mobile} {
+      width: 249px;
+      height: 221px;
+      top: 10px;
+      left: -15px;
+    }
   }
   
   &::before {
@@ -110,10 +137,17 @@ const PhotoWrapper = styled.div`
     position: absolute;
     left: 44px;
     bottom: 2px;
+
+    @media ${theme.media.mobile} {
+      width: 100%;
+      left: 0;
+    }
   }
 `
 
 const Photo = styled.img`
-
+  @media ${theme.media.mobile} {
+    max-width: 250px;
+  }
 `
 

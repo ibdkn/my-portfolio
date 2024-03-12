@@ -18,7 +18,7 @@ export const Projects = () => {
                     <SectionTitle>projects</SectionTitle>
                     <Movement title={"View all ~~>"}/>
                 </ProjectsWrapper>
-                <FlexWrapper justify={"center"} align={"flex-start"} gap={"16px"}>
+                <FlexWrapper justify={"center"} align={"flex-start"} gap={"16px"} wrap={"wrap"}>
                     <Project src={skillImage1} technologies={"HTML SCSS Python Flask"} title={"ChertNodes"} description={"Minecraft servers hosting"}/>
                     <Project src={skillImage2} technologies={"React Express Discord.js Node.js HTML SCSS Python Flask"} title={"ProtectX"} description={"Discord anti-crash bot"}/>
                     <Project src={skillImage3} technologies={"CSS Express Node.js"} title={"Kahoot Answers Viewer"} description={"Get answers to your kahoot quiz"}/>
@@ -49,13 +49,19 @@ const StyledProjects = styled.section`
     right: -87px;
     bottom: 147px;
     z-index: -1;
+
+    @media ${theme.media.desktop} {
+      display: none;
+    }
   }
 `
+
 const ProjectsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 48px;
 `
+
 
 

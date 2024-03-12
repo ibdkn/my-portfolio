@@ -17,7 +17,6 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  min-width: 192px;
   max-width: 192px;
   width: 100%;
   border: 1px solid ${theme.colors.secondaryColor};

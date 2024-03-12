@@ -12,7 +12,7 @@ export const Contacts = () => {
         <StyledContacts>
             <Container>
                 <SectionTitle>contacts</SectionTitle>
-                <FlexWrapper justify={"space-between"} align={"flex-start"}>
+                <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"} gap={"20px"}>
                     <Description>
                         I’m interested in freelance opportunities. However, if you have other request or question, don’t
                         hesitate to contact me
@@ -47,6 +47,16 @@ const StyledContacts = styled.section`
     left: -51px;
     bottom: 85px;
     z-index: -1;
+
+    @media ${theme.media.desktop} {
+      display: none;
+    }
+  }
+  
+  ${Container} > ${FlexWrapper} {
+    @media ${theme.media.desktop} {
+      justify-content: center;
+    }
   }
 
 `

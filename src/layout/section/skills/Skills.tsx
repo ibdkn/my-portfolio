@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
 import elementsBg from "../../../assets/images/skills/elements.svg"
+import {theme} from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
@@ -33,6 +34,17 @@ const StyledSkills = styled.section`
     background-repeat: no-repeat;
     background-size: 349px, contain;
     background-position: top 54px left 32px;
+    
+    @media ${theme.media.desktop} {
+      background-image: none;
+    }
+    
+    >${FlexWrapper} {
+      @media ${theme.media.desktop} {
+        
+        justify-content: center;
+      }
+    }
   }
 `
 
@@ -40,10 +52,13 @@ const SkillsWrapper = styled.div`
   max-width: 608px;
   width: 100%;
   display: flex;
-  align-items: flex-start;
   justify-content: flex-end;
   gap: 16px;
   flex-wrap: wrap;
+
+  @media ${theme.media.tablet} {
+    justify-content: center;
+  }
 `
 
 const Image = styled.img`
