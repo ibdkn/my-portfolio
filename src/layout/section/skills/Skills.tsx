@@ -7,6 +7,29 @@ import {Container} from "../../../components/Container";
 import elementsBg from "../../../assets/images/skills/elements.svg"
 import {theme} from "../../../styles/Theme";
 
+// const SkillsData = [
+//     {
+//         title: "Frameworks",
+//         technologies: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"]
+//     },
+//     {
+//         title: "Tools",
+//         technologies: ["VSCode", "Neovim", "Linux", "Figma", "XFCE", "Arch", "Git", "Font Awesome"]
+//     },
+//     {
+//         title: "Languages",
+//         technologies: ["TypeScript", "Lua", "Python", "JavaScript"]
+//     },
+//     {
+//         title: "Other",
+//         technologies: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"]
+//     },
+//     {
+//         title: "Databases",
+//         technologies: ["SQLite", "PostgreSQL", "Mongo"]
+//     },
+// ]
+
 export const Skills = () => {
     return (
         <StyledSkills>
@@ -14,11 +37,11 @@ export const Skills = () => {
                 <SectionTitle>skills</SectionTitle>
                 <FlexWrapper justify={"flex-end"} align={"flex-start"}>
                     <SkillsWrapper>
-                        <Skill title={"Languages"} technologies={"TypeScript Lua Python JavaScript"} />
-                        <Skill title={"Databases"} technologies={"SQLite PostgreSQL Mongo"} />
                         <Skill title={"Tools"} technologies={"VSCode Neovim Linux Figma XFCE Arch Git Font Awesome"} />
-                        <Skill title={"Other"} technologies={"HTML CSS EJS SCSS REST Jinja"} />
                         <Skill title={"Frameworks"} technologies={"React Vue Disnake Discord.js Flask Express.js"} />
+                        <Skill title={"Databases"} technologies={"SQLite PostgreSQL Mongo"} />
+                        <Skill title={"Other"} technologies={"HTML CSS EJS SCSS REST Jinja"} />
+                        <Skill title={"Languages"} technologies={"TypeScript Lua Python JavaScript"} />
                     </SkillsWrapper>
                 </FlexWrapper>
             </Container>
@@ -35,7 +58,7 @@ const StyledSkills = styled.section`
     background-size: 349px, contain;
     background-position: top 54px left 32px;
     
-    @media ${theme.media.desktop} {
+    @media ${theme.media.tablet} {
       background-image: none;
     }
     
@@ -50,17 +73,21 @@ const StyledSkills = styled.section`
 
 const SkillsWrapper = styled.div`
   max-width: 608px;
-  width: 100%;
+  margin-left: auto;
   display: flex;
-  justify-content: flex-end;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+  height: 290px;
 
   @media ${theme.media.tablet} {
+    max-width: 100%;
+    height: auto;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: stretch;
     justify-content: center;
+    margin: 0;
   }
-`
-
-const Image = styled.img`
-  
 `
