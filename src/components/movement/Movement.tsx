@@ -9,5 +9,5 @@ export const Movement = (props: { title: string }) => {
 };
 
 const MovementLink = styled.a`
-  ${font({weight: 500, Fmax: 16, Fmin: 14})};
+  
 `
