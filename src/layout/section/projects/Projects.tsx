@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import { Movement } from '../../../components/movement/Movement';
-import {SectionTitle} from "../../../components/SectionTitle";
+import {StyledTitle} from "../../../components/StyledTitle";
 import { Project } from './project/Project';
 import skillImage1 from '../../../assets/images/projects/skill-1.png'
 import skillImage2 from '../../../assets/images/projects/skill-2.png'
@@ -15,7 +15,7 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <ProjectsWrapper>
-                    <SectionTitle>projects</SectionTitle>
+                    <StyledTitle titleType={"section"} lineWidth={"511px"}>projects</StyledTitle>
                     <Movement title={"View all ~~>"}/>
                 </ProjectsWrapper>
                 <FlexWrapper justify={"center"} align={"flex-start"} gap={"16px"} wrap={"wrap"}>

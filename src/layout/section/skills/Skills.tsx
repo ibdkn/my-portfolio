@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle";
+import {StyledTitle} from "../../../components/StyledTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
@@ -34,7 +34,7 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
-                <SectionTitle>skills</SectionTitle>
+                <StyledTitle titleType={"section"} lineWidth={"239px"}>skills</StyledTitle>
                 <FlexWrapper justify={"flex-end"} align={"flex-start"}>
                     <SkillsWrapper>
                         <Skill title={"Tools"} technologies={"VSCode Neovim Linux Figma XFCE Arch Git Font Awesome"} />

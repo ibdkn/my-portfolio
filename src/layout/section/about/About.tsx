@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle";
+import {StyledTitle} from "../../../components/StyledTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import photo from "../../../assets/images/about/about.png"
 import {StyledButton} from "../../../components/Button";
@@ -14,7 +14,7 @@ export const About = () => {
     return (
         <StyledAbout>
             <Container>
-                <SectionTitle>about-me</SectionTitle>
+                <StyledTitle titleType={"section"} lineWidth={"326px"}>about-me</StyledTitle>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <FlexWrapper direction={"column"}>
                         <Description>

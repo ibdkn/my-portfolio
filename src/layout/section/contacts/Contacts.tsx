@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle";
+import {StyledTitle} from "../../../components/StyledTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import { Social } from '../../../components/social/Social';
 import {Container} from "../../../components/Container";
@@ -11,7 +11,7 @@ export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
-                <SectionTitle>contacts</SectionTitle>
+                <StyledTitle>contacts</StyledTitle>
                 <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"} gap={"20px"}>
                     <Description>
                         I’m interested in freelance opportunities. However, if you have other request or question, don’t
