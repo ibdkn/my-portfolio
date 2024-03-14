@@ -17,9 +17,14 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  max-width: 192px;
-  width: 100%;
+  width: 192px;
+  background-color: ${theme.colors.primaryBg};
   border: 1px solid ${theme.colors.secondaryColor};
+  margin-bottom: 5px;
+
+  @media ${theme.media.tablet} {
+  margin-bottom: 0;
+  }
 `
 
 const Title = styled.h3`
