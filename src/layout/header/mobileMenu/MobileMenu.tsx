@@ -64,10 +64,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
     position: absolute;
     right: 0;
-    top: 0;
+    top: 9px;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
-      transform: rotate(45deg);
+      transform: rotate(-45deg);
     `}
     
     &::before {
