@@ -40,9 +40,9 @@ const StyledQuote = styled.section`
     right: -9px;
     top: 14px;
     z-index: 1;
-    
-    @media ${theme.media.desktop} {
-      display: none;
+
+    @media ${theme.media.container} {
+      right: calc(50% - 691px);
     }
   }
 `
@@ -52,7 +52,7 @@ const BlockquoteWrapper = styled.div`
 `
 
 const Blockquote = styled.blockquote`
-  max-width: 714px;
+  max-width: max-content;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -106,7 +106,7 @@ const Text = styled.p`
 
 const Author = styled.footer`
   padding: 16px;
-  ${font({weight: 400, Fmax: 24, Fmin: 18})}
+  ${font({weight: 400, Fmax: 24, Fmin: 18})};
   border: 1px solid ${theme.colors.secondaryColor};
   border-top: none;
 `

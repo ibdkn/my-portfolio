@@ -48,8 +48,8 @@ const StyledContacts = styled.section`
     bottom: 85px;
     z-index: -1;
 
-    @media ${theme.media.desktop} {
-      display: none;
+    @media ${theme.media.container} {
+      left: calc(50% - 734px);
     }
   }
   

@@ -60,9 +60,9 @@ const StyledAbout = styled.section`
     left: -77px;
     top: 188px;
     z-index: -1;
-    
-    @media ${theme.media.desktop} {
-      display: none;
+
+    @media ${theme.media.container} {
+      left: calc(50% - 760px);
     }
   }
   
@@ -78,8 +78,8 @@ const StyledAbout = styled.section`
     bottom: 156px;
     z-index: -1;
 
-    @media ${theme.media.desktop} {
-      display: none;
+    @media ${theme.media.container} {
+      right: calc(50% - 707px);
     }
   }
   

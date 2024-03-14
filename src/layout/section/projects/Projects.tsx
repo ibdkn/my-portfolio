@@ -50,6 +50,10 @@ const StyledProjects = styled.section`
     bottom: 147px;
     z-index: -1;
 
+    @media ${theme.media.container} {
+      right: calc(50% - 770px);
+    }
+
     @media ${theme.media.desktop} {
       display: none;
     }
