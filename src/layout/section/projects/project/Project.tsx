@@ -31,6 +31,7 @@ export const Project = (props: ProjectPropsType) => {
 const StyledProject = styled.div`
   max-width: 332px;
   width: 100%;
+  background-color: ${theme.colors.primaryBg};
   border: 1px solid ${theme.colors.secondaryColor};
 `
 
