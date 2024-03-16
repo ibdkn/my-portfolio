@@ -40,7 +40,8 @@ export const Projects: React.FC = () => {
                 </S.ProjectsWrapper>
                 <FlexWrapper justify={"center"} align={"flex-start"} gap={"16px"} wrap={"wrap"}>
                     {projectsData.map((project, index) => {
-                        return <Project src={project.src}
+                        return <Project key={index}
+                                        src={project.src}
                                         technologies={project.technologies}
                                         title={project.title}
                                         description={project.description}/>
