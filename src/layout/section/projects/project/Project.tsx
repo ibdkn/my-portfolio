@@ -1,64 +1,30 @@
 import React from 'react';
-import styled from "styled-components";
 import {StyledButton} from "../../../../components/Button";
 import {Movement} from "../../../../components/movement/Movement";
-import {theme} from "../../../../styles/Theme";
-import {font} from "../../../../styles/Common";
+import { Technologies } from '../../../../components/technologies/Technologies';
+import {S} from "../Projects_Styles"
 
 type ProjectPropsType = {
     src?: string,
-    technologies: string,
+    technologies: Array<string>,
     title: string,
     description: string
 }
 
-export const Project = (props: ProjectPropsType) => {
+export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
     return (
-        <StyledProject>
-            <Photo src={props.src} alt=""/>
-            <Technologies>{props.technologies}</Technologies>
-            <InfoWrapper>
-                <Title>{props.title}</Title>
-                <Description>{props.description}</Description>
+        <S.Project>
+            <S.Photo src={props.src} alt=""/>
+            <Technologies technologiesItems={props.technologies}/>
+            <S.InfoWrapper>
+                <S.Title>{props.title}</S.Title>
+                <S.Description>{props.description}</S.Description>
                 <StyledButton>
                     <Movement title={"Live <~>"}/>
                 </StyledButton>
-            </InfoWrapper>
-        </StyledProject>
+            </S.InfoWrapper>
+        </S.Project>
     );
 };
 
-const StyledProject = styled.div`
-  max-width: 332px;
-  width: 100%;
-  background-color: ${theme.colors.primaryBg};
-  border: 1px solid ${theme.colors.secondaryColor};
-`
 
-const Photo = styled.img`
-  width: 100%;
-  object-fit: cover;
-`
-
-const Technologies = styled.p`
-  padding: 8px;
-  font-weight: 400;
-  font-size: 16px;
-  color: ${theme.colors.secondaryColor};
-  border-bottom: 1px solid ${theme.colors.secondaryColor};
-`
-
-const InfoWrapper = styled.div`
-  padding: 16px;
-`
-
-const Title = styled.h3`
-  ${font({weight: 500, Fmax: 24, Fmin: 20})};
-`
-
-const Description = styled.p`
-  font-weight: 400;
-  font-size: 16px;
-  color: ${theme.colors.secondaryColor};
-  margin: 16px 0;
-`
