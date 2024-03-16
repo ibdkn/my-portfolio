@@ -57,6 +57,7 @@ const Photo = styled.img`
 
 const InfoWrapper = styled.div`
   padding: 16px;
+  border-top: 1px solid ${theme.colors.secondaryColor};
 `
 
 const Title = styled.h3`
