@@ -1,24 +1,13 @@
 import React from 'react';
-import styled from "styled-components";
 import {Icon} from "../icon/Icon";
+import {S} from "./Logo_Styles"
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
     return (
-        <StyledLogoWrapper href={"#"}>
+        <S.LogoWrapper href={"#"}>
             <Icon iconId={'logo'} width={'16'} height={'16'}/>
-            <StyledLogoName>Elias</StyledLogoName>
-        </StyledLogoWrapper>
+            <S.LogoName>Elias</S.LogoName>
+        </S.LogoWrapper>
     );
 };
 
-const StyledLogoWrapper = styled.a`
-  position: relative;
-  z-index: 999999999;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-`
-
-const StyledLogoName = styled.span`
-  font-weight: 700;
-`
