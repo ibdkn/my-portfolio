@@ -7,7 +7,7 @@ export const Technologies = (props: {technologiesItems: Array<string>}) => {
         <StyledTechnologies>
             {
                 props.technologiesItems.map((technology, index) => {
-                    return <Technology>{technology}</Technology>
+                    return <Technology key={index}>{technology}</Technology>
                 })
             }
         </StyledTechnologies>
@@ -19,7 +19,6 @@ const StyledTechnologies = styled.ul`
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  border-bottom: 1px solid ${theme.colors.secondaryColor};
 `
 
 const Technology = styled.li`
