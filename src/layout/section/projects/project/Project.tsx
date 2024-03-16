@@ -6,7 +6,7 @@ import {theme} from "../../../../styles/Theme";
 import {font} from "../../../../styles/Common";
 
 type ProjectPropsType = {
-    src: string,
+    src?: string,
     technologies: string,
     title: string,
     description: string
