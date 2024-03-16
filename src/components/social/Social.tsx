@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from "styled-components";
 import {Icon} from "../icon/Icon";
-import {theme} from "../../styles/Theme";
+import {S} from "./Social_Styles"
 
 type SocialPropsType = {
     iconId: string,
@@ -11,29 +10,12 @@ type SocialPropsType = {
     text: string
 }
 
-export const Social = (props: SocialPropsType) => {
+export const Social: React.FC<SocialPropsType> = (props: SocialPropsType) => {
     return (
-        <StyledSocial href={"#"}>
+        <S.Social href={"#"}>
             <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
-            <Name>{props.text}</Name>
-        </StyledSocial>
+            <S.Name>{props.text}</S.Name>
+        </S.Social>
     );
 };
 
-const Name = styled.div`
-  font-weight: 400;
-  font-size: 16px;
-  color: ${theme.colors.secondaryColor};
-`
-
-const StyledSocial = styled.a`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #ABB2BF;
-
-  &:hover,
-  &:hover ${Name} {
-    color: ${theme.colors.primaryColor};
-  }
-`
