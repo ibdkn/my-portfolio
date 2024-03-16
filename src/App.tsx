@@ -8,11 +8,10 @@ import {About} from "./layout/section/about/About";
 import {Contacts} from "./layout/section/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
 
-
 function App() {
     return (
         <div className="App">
-            <Header />
+            <Header/>
             <main>
                 <Main />
                 <Quote />
@@ -20,8 +19,12 @@ function App() {
                 <Skills />
                 <About />
                 <Contacts />
+
+                {/* pages */}
+                {/*<ProjectsPage/>*/}
+                {/*<AboutPage />*/}
             </main>
-            <Footer />
+            <Footer/>
         </div>
     );
 }
