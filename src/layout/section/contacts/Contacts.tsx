@@ -11,7 +11,7 @@ export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
-                <StyledTitle>contacts</StyledTitle>
+                <StyledTitle titleType={"section"} lineWidth={"127px"}>contacts</StyledTitle>
                 <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"} gap={"20px"}>
                     <Description>
                         I’m interested in freelance opportunities. However, if you have other request or question, don’t
