@@ -14,7 +14,7 @@ type ProjectPropsType = {
 export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
     return (
         <S.Project>
-            <S.Photo src={props.src} alt=""/>
+            {props.src ? <S.Photo src={props.src} alt=""/> : ''}
             <Technologies technologiesItems={props.technologies}/>
             <S.InfoWrapper>
                 <S.Title>{props.title}</S.Title>

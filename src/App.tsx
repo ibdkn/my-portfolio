@@ -7,6 +7,8 @@ import {Skills} from "./layout/section/skills/Skills";
 import {About} from "./layout/section/about/About";
 import {Contacts} from "./layout/section/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
+import {ProjectsPage} from "./pages/projects/ProjectsPage";
+import { AboutPage } from './pages/about/AboutPage';
 
 function App() {
     return (
@@ -19,10 +21,6 @@ function App() {
                 <Skills />
                 <About />
                 <Contacts />
-
-                {/* pages */}
-                {/*<ProjectsPage/>*/}
-                {/*<AboutPage />*/}
             </main>
             <Footer/>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container} from "../../components/Container";
-import {PageInfo} from "../../components/PageInfo";
+import {PageInfo} from "../../components/pages/PageInfo";
 import styled from "styled-components";
 import { MoreAbout } from './about/MoreAbout';
 import {Facts} from "./facts/Facts";
