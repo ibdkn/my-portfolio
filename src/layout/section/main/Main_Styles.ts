@@ -40,7 +40,7 @@ const Description = styled.p`
 
 const PhotoWrapper = styled.div`
   width: 469px;
-  height: 386px;
+  height: 420px;
   
   position: relative;
   z-index: 0;
