@@ -1,11 +1,20 @@
 import React from 'react';
-import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
-import {Icon} from "../../components/icon/Icon";
 import {SocialLink} from "../../components/SocialLink";
+import {Logo} from "../../components/logo/Logo";
+import {Icon} from "../../components/icon/Icon";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
-import {S} from "./Header_Styles"
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
+import {S} from "./Header_Styles"
+
+const socialItemsData = [
+    {
+        iconId: "github"
+    },
+    {
+        iconId: "telegram"
+    },
+]
 
 const menuItems = ["home", "projects", "skills", "about-me", "contacts"];
 
@@ -23,15 +32,13 @@ export const Header: React.FC = () => {
     return (
         <S.Header>
             <S.SocialFixed>
-                <SocialLink href={"#"}>
-                    <Icon iconId={'github'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
-                </SocialLink>
-                <SocialLink href={"#"}>
-                    <Icon iconId={'telegram'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
-                </SocialLink>
-                {/*<SocialLink href={"#"}>*/}
-                {/*    <Icon iconId={'instagram'} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>*/}
-                {/*</SocialLink>*/}
+                {socialItemsData.map((socialItem, index) => {
+                    return (
+                        <SocialLink href={"#"} key={index}>
+                            <Icon iconId={socialItem.iconId} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
+                        </SocialLink>
+                    )
+                })}
             </S.SocialFixed>
             <Container>
                 <S.HeaderWrapper>
