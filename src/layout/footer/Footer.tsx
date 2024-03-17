@@ -13,6 +13,9 @@ const socialItemsData = [
     {
         iconId: "discord"
     },
+    {
+        iconId: "instagram"
+    },
 ]
 
 export const Footer: React.FC = () => {
@@ -23,10 +26,10 @@ export const Footer: React.FC = () => {
                     <S.Info>
                         <FlexWrapper align={"center"} gap={"24px"}>
                             <Logo/>
-                            <S.WebsiteAddress>elias@elias-dev.ml</S.WebsiteAddress>
+                            {/*<S.WebsiteAddress>elias@elias-dev.ml</S.WebsiteAddress>*/}
                         </FlexWrapper>
                         <S.Text>
-                            Web designer and front-end developer
+                            Front-end developer
                         </S.Text>
                     </S.Info>
                     <S.Media>

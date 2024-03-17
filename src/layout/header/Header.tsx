@@ -14,6 +14,9 @@ const socialItemsData = [
     {
         iconId: "telegram"
     },
+    {
+        iconId: "instagram"
+    },
 ]
 
 const menuItems = ["home", "projects", "skills", "about-me", "contacts"];
