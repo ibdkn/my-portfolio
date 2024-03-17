@@ -9,10 +9,10 @@ export const Quote: React.FC = () => {
                 <S.BlockquoteWrapper>
                     <S.Blockquote>
                         <S.Text>
-                            With great power comes great electricity bill
+                            Nothing in this world, that’s worth having comes easy.
                         </S.Text>
                         <S.Author>
-                            - Dr. Who
+                            - Bob Kelso
                         </S.Author>
                     </S.Blockquote>
                 </S.BlockquoteWrapper>
