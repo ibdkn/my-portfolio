@@ -44,7 +44,7 @@ const Description = styled.p`
 `
 
 const MessageBlock = styled.div`
-  max-width: 209px;
+  max-width: max-content;
   width: 100%;
   padding: 16px;
   border: 1px solid ${theme.colors.secondaryColor};

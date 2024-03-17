@@ -19,8 +19,8 @@ export const Contacts: React.FC = () => {
                     <S.MessageBlock>
                         <S.Title>Message me here</S.Title>
                         <FlexWrapper direction={"column"} gap={"8px"}>
-                            <Social iconId={"telegram"} width={"32"} height={"32"} viewBox={"0 0 32 32"} text={"@Elias#3519"}/>
-                            <Social iconId={"email"} width={"32"} height={"32"} viewBox={"0 0 32 32"} text={"elias@elias.me"}/>
+                            <Social iconId={"telegram"} width={"32"} height={"32"} viewBox={"0 0 32 32"} text={"@IraKochka"}/>
+                            <Social iconId={"email"} width={"32"} height={"32"} viewBox={"0 0 32 32"} text={"bdkn.i@yandex.ru"}/>
                         </FlexWrapper>
                     </S.MessageBlock>
                 </FlexWrapper>
