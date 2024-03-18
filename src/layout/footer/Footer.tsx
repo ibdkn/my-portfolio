@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
                         </FlexWrapper>
                     </S.Media>
                 </FlexWrapper>
-                <S.Copyright>© Copyright 2022. Made by Elias</S.Copyright>
+                <S.Copyright>© Copyright 2024. Made by Bdkni</S.Copyright>
             </Container>
         </S.Footer>
     );
