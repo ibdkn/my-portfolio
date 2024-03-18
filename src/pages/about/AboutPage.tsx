@@ -2,19 +2,16 @@ import React from 'react';
 import {Container} from "../../components/Container";
 import {PageInfo} from "../../components/pages/PageInfo";
 import styled from "styled-components";
-import { MoreAbout } from './about/MoreAbout';
 import {Facts} from "./facts/Facts";
-import {Skills} from "../../layout/section/skills/Skills";
-import {About} from "../../layout/section/about/About";
-
+import {Info} from "./info/Info";
+import {Skills} from "./skill/Skills";
 
 export  const AboutPage = () => {
     return (
         <StyledAbout>
             <Container>
                 <PageInfo title={"about-me"} description={"Who am i?"} />
-                <About/>
-                {/*<MoreAbout/>*/}
+                <Info/>
                 <Skills/>
                 <Facts/>
             </Container>
@@ -22,7 +19,7 @@ export  const AboutPage = () => {
     );
 };
 
-const StyledAbout = styled.div`
+const StyledAbout = styled.section`
   padding: 80px 0 145px 0;
   overflow-x: hidden;
   
@@ -30,5 +27,11 @@ const StyledAbout = styled.div`
 
   section {
     padding: 35px 0;
+  }
+  
+  ${Container} {
+    > div {
+      padding: 35px 0;
+    }
   }
 `
