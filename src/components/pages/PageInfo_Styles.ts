@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const PageInfo = styled.section`
-  padding: 35px 0;
+const PageInfo = styled.div`
+  //padding: 35px 0;
 `
 
 const Description = styled.div`
