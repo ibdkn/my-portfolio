@@ -17,6 +17,7 @@ export const Fact = (props: { factsItems: Array<string> }) => {
 };
 
 const StyledFact = styled.div`
+  max-width: 615px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;

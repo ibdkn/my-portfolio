@@ -22,7 +22,5 @@ export const Facts = () => {
     );
 };
 
-const StyledFacts = styled.div`
-  max-width: 615px;
-`
+const StyledFacts = styled.div``
 
