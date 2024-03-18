@@ -13,6 +13,11 @@ export const GlobalStyles = createGlobalStyle `
   a {
     color: inherit;
     text-decoration: none;
+    transition: .2s ease-in-out;
+    
+    &:hover {
+      transition: .2s ease-in-out;
+    }
   }
   
   ul li {
@@ -25,6 +30,19 @@ export const GlobalStyles = createGlobalStyle `
     cursor: pointer;
     background-color: transparent;
     border: none;
+    transition: .4s ease-in-out;
+
+    &:hover {
+      transition: .4s ease-in-out;
+    }
+    
+    a, a:hover {
+      transition: none;
+    }
+  }
+  
+  html {
+    min-width: 360px;
   }
   
   body {

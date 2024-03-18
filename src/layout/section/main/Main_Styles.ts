@@ -10,7 +10,6 @@ const Main = styled.section`
   position: relative;
   display: flex;
   min-height: 100vh;
-  overflow: hidden;
 
   @media screen and (max-width: 1035px) {
     ${Container} > ${FlexWrapper} {
@@ -21,6 +20,7 @@ const Main = styled.section`
 
 const Info = styled.div`
   max-width: 537px;
+  //overflow-x: hidden;
 `
 
 const Name = styled.h2`
@@ -46,6 +46,10 @@ const MainTitle = styled.h1`
     }
 
     color: ${theme.colors.accent};
+  }
+  
+  @media ${theme.media.mobile} {
+    max-width: 355px;
   }
 `
 

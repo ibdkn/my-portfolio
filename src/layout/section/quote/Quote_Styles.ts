@@ -30,7 +30,7 @@ const BlockquoteWrapper = styled.div`
 `
 
 const Blockquote = styled.blockquote`
-  max-width: max-content;
+  max-width: 712px;
   width: 100%;
   display: flex;
   justify-content: center;

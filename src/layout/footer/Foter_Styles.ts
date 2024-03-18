@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 import {font} from "../../styles/Common";
+import {Logo} from "../../components/logo/Logo";
 
 const Footer = styled.footer`
+  position: relative;
   padding: 32px 0;
   border-top: 1px solid ${theme.colors.secondaryColor};
+  z-index: 0;
 `
 
 const Info = styled.div`
-
+  
 `
 
 const WebsiteAddress = styled.span`
