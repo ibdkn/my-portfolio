@@ -75,7 +75,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
-  background: ${theme.colors.primaryBg};
+  background: rgba(25, 25, 25, 0.95);
   z-index: 99999;
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -84,11 +84,10 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     flex-direction: column;
     gap: 0;
   `}
-
   ul {
     padding-top: 95px;
     padding-left: 15px;
-    font-size: 32px;
+    font-size: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
