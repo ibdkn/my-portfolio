@@ -10,6 +10,7 @@ const Main = styled.section`
   position: relative;
   display: flex;
   min-height: 100vh;
+  overflow: hidden;
 
   @media screen and (max-width: 1035px) {
     ${Container} > ${FlexWrapper} {
@@ -33,11 +34,17 @@ const Name = styled.h2`
 `
 
 const MainTitle = styled.h1`
+  display: flex;
+  gap: 10px;
   ${font({weight: 600, Fmax: 24, Fmin: 22})};
+  white-space: nowrap;
   margin-bottom: 32px;
-  
-  span {
-    white-space: nowrap;
+
+  span:last-child {
+    p {
+      display: none;
+    }
+
     color: ${theme.colors.accent};
   }
 `

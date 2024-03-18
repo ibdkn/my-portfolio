@@ -1,4 +1,5 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import photo from '../../../assets/images/main/main.png'
 import {StyledButton} from "../../../components/Button";
@@ -18,7 +19,17 @@ export const Main: React.FC = () => {
                             My name is Irina
                         </S.Name>
                         <S.MainTitle>
-                            I am a<span> front-end developer</span>
+                            <span>I'm a</span>
+                            <span>
+                                <p>front-end developer</p>
+                                <Typewriter
+                                    options={{
+                                        strings: ['front-end developer'],
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                />
+                            </span>
                         </S.MainTitle>
                         <S.Description>
                             I craft responsive websites where technologies meet creativity
