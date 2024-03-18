@@ -59,15 +59,15 @@ const PhotoWrapper = styled.div`
       transform: translateX(-50%);
     }
   }
+
+  @media ${theme.media.mobile} {
+    max-width: 300px;
+  }
 `
 
 const Photo = styled.img`
   width: 100%;
   height: 100%;
-  
-  @media ${theme.media.mobile} {
-    max-width: 300px;
-  }
 `
 
 export const S = {
