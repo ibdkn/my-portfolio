@@ -19,8 +19,6 @@ const socialItemsData = [
     },
 ]
 
-const menuItems = ["home", "projects", "skills", "about-me", "contacts"];
-
 export const Header: React.FC = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 768;
@@ -47,7 +45,7 @@ export const Header: React.FC = () => {
                 <S.HeaderWrapper>
                     <Logo/>
 
-                    {width <= breakpoint ? <MobileMenu menuItems={menuItems}/> : <DesktopMenu menuItems={menuItems}/>}
+                    {width <= breakpoint ? <MobileMenu/> : <DesktopMenu/>}
                 </S.HeaderWrapper>
             </Container>
         </S.Header>

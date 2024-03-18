@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {Link} from "react-scroll";
 
 // menu
 const ListItem = styled.li`
@@ -11,10 +12,11 @@ const ListItem = styled.li`
   }
 `
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   color: ${theme.colors.secondaryColor};
+  cursor: pointer;
   
-  &:hover {
+  &:hover, &.active {
     color: ${theme.colors.primaryColor};
   }
 `
@@ -45,9 +47,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: absolute;
     right: 0;
     top: 9px;
+    transition: .2s ease-in-out;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       transform: rotate(-45deg);
+      transition: .2s ease-in-out;
     `}
     
     &::before {
@@ -62,6 +66,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         width: 24px;
         transform: rotate(90deg) translateY(0);
+        transition: .2s ease-in-out;
       `}
     }
 
@@ -69,21 +74,26 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  display: none;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   background: rgba(25, 25, 25, 0.95);
   z-index: 99999;
+  transform: translateX(-100%);
+  transition: .5s ease-in-out;
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     gap: 0;
+    transform: translateX(0);
+    transition: .5s ease-in-out;
   `}
+  
   ul {
     padding-top: 95px;
     padding-left: 15px;
@@ -92,7 +102,6 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-    height: 100%;
   }
 `
 
@@ -123,7 +132,7 @@ const DesktopMenu = styled.div`
 export const S = {
     // menu
     ListItem,
-    Link,
+    NavLink,
 
     // mobile menu
     MobileMenu,

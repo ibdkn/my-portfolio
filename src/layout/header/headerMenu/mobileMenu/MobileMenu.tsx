@@ -16,7 +16,7 @@ const socialItemsData = [
     },
 ]
 
-export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+export const MobileMenu: React.FC = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen);
@@ -28,7 +28,7 @@ export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuIte
                 <span></span>
             </S.BurgerButton>
             <S.MobileMenuPopup isOpen={menuIsOpen} onClick={ () => {setMenuIsOpen(false)} }>
-                <Menu menuItems={props.menuItems}/>
+                <Menu/>
                 <S.Social>
                     {socialItemsData.map((socialItem, index) => {
                         return (

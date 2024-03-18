@@ -8,7 +8,7 @@ import {S} from "./Contacts_Styles"
 
 export const Contacts: React.FC = () => {
     return (
-        <S.Contacts>
+        <S.Contacts id={"contacts"}>
             <Container>
                 <StyledTitle titleType={"section"} lineWidth={"127px"}>contacts</StyledTitle>
                 <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"} gap={"20px"}>

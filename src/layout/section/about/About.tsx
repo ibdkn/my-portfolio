@@ -10,7 +10,7 @@ import {Photo} from "../../../components/about/photo/Photo";
 
 export const About: React.FC = () => {
     return (
-        <S.About>
+        <S.About id={"about-me"}>
             <Container>
                 <StyledTitle titleType={"section"} lineWidth={"326px"}>about-me</StyledTitle>
                 <FlexWrapper justify={"space-between"} align={"center"}>

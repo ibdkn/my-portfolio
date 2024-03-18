@@ -32,7 +32,7 @@ const projectsData = [
 
 export const Projects: React.FC = () => {
     return (
-        <S.Projects>
+        <S.Projects id={"projects"}>
             <Container>
                 <S.ProjectsWrapper>
                     <StyledTitle titleType={"section"} lineWidth={"511px"}>projects</StyledTitle>

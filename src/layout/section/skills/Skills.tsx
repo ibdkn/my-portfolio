@@ -30,7 +30,7 @@ const skillsData = [
 
 export const Skills: React.FC = () => {
     return (
-        <S.Skills>
+        <S.Skills id={"skills"}>
             <Container>
                 <StyledTitle titleType={"section"} lineWidth={"239px"}>skills</StyledTitle>
                 <FlexWrapper justify={"flex-end"} align={"flex-start"}>
