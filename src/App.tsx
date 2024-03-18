@@ -7,6 +7,7 @@ import {Skills} from "./layout/section/skills/Skills";
 import {About} from "./layout/section/about/About";
 import {Contacts} from "./layout/section/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
+import {GoTopButton} from "./components/goTopButton/GoTopButton";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Contacts />
             </main>
             <Footer/>
+            <GoTopButton/>
         </div>
     );
 }
