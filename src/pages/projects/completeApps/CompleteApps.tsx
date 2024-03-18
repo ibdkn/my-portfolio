@@ -32,7 +32,7 @@ export const CompleteApps = () => {
     return (
         <StyledCompleteApps>
             <StyledTitle titleType={"section"}>complete-apps</StyledTitle>
-            <FlexWrapper justify={"flex-start"} align={"flex-start"} gap={"16px"} wrap={"wrap"}>
+            <FlexWrapper justify={"center"} align={"flex-start"} gap={"16px"} wrap={"wrap"}>
                 {completedAppsData.map((app, index) => {
                     return (
                         <Project key={index}

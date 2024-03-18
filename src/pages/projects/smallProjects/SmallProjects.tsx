@@ -41,7 +41,7 @@ export const SmallProjects = () => {
     return (
         <StyledSmallProjects>
             <StyledTitle titleType={"section"}>small-projects</StyledTitle>
-            <FlexWrapper justify={"flex-start"} align={"flex-start"} gap={"16px"} wrap={"wrap"}>
+            <FlexWrapper justify={"center"} align={"flex-start"} gap={"16px"} wrap={"wrap"}>
                 {smallProjectsData.map((project, index) => {
                     return (
                         <Project key={index}
