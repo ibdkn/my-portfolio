@@ -11,11 +11,17 @@ export const Main: React.FC = () => {
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
                     <S.Info>
+                        <S.Description>
+                            Hi there!
+                        </S.Description>
+                        <S.Name>
+                            My name is Irina
+                        </S.Name>
                         <S.MainTitle>
-                            Elias is a <span>web designer</span> and <span>front-end developer</span>
+                            I am a<span> front-end developer</span>
                         </S.MainTitle>
                         <S.Description>
-                            He crafts responsive websites where technologies meet creativity
+                            I craft responsive websites where technologies meet creativity
                         </S.Description>
                         <StyledButton>Contact me!!</StyledButton>
                     </S.Info>

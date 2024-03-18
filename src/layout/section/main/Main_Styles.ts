@@ -4,6 +4,7 @@ import dots from "../../../assets/images/bgElements/dots.svg";
 import square from "../../../assets/images/bgElements/square.svg";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {font} from "../../../styles/Common";
 
 const Main = styled.section`
   position: relative;
@@ -21,11 +22,22 @@ const Info = styled.div`
   max-width: 537px;
 `
 
-const MainTitle = styled.h1`
+const Name = styled.h2`
   font-weight: 600;
   font-size: 32px;
+  margin-bottom: 5px;
   
   span {
+    color: ${theme.colors.accent};
+  }
+`
+
+const MainTitle = styled.h1`
+  ${font({weight: 600, Fmax: 24, Fmin: 22})};
+  margin-bottom: 32px;
+  
+  span {
+    white-space: nowrap;
     color: ${theme.colors.accent};
   }
 `
@@ -35,7 +47,7 @@ const Description = styled.p`
   font-size: 16px;
   line-height: 156%;
   color: ${theme.colors.secondaryColor};
-  margin: 32px 0 24px;
+  margin-bottom: 24px;
 `
 
 const PhotoWrapper = styled.div`
@@ -91,7 +103,7 @@ const PhotoWrapper = styled.div`
   
   @media ${theme.media.mobile} {
     width: 316px;
-    height: 260px;
+    height: 275px;
   }
 `
 
@@ -136,6 +148,7 @@ const Subtext = styled.p`
 export const S = {
     Main,
     Info,
+    Name,
     MainTitle,
     Description,
     PhotoWrapper,
