@@ -15,4 +15,3 @@ export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
         </S.Skill>
     );
 };
-

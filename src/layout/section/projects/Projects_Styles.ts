@@ -44,7 +44,7 @@ const ProjectsWrapper = styled.div`
 
 // project
 const Project = styled.div`
-  max-width: 332px;
+  max-width: 360px;
   width: 100%;
   background-color: ${theme.colors.primaryBg};
   border: 1px solid ${theme.colors.secondaryColor};

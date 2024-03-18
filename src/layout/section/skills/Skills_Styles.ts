@@ -8,20 +8,20 @@ import {Container} from "../../../components/Container";
 // skills
 const Skills = styled.section`
   padding: 54px 0;
-  
+
   ${Container} {
     background-image: url(${elementsBg});
     background-repeat: no-repeat;
     background-size: 349px, contain;
     background-position: top 54px left 32px;
-    
+
     @media ${theme.media.tablet} {
       background-image: none;
     }
-    
+
     >${FlexWrapper} {
       @media ${theme.media.desktop} {
-        
+
         justify-content: center;
       }
     }

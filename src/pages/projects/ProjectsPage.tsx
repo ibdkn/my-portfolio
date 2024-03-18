@@ -20,8 +20,10 @@ export const ProjectsPage = () => {
 const StyledProjects = styled.div`
   padding: 80px 0 145px 0;
   overflow-x: hidden;
-  
-  section {
-    padding: 35px 0;
+
+  ${Container} {
+    > div {
+      padding: 35px 0;
+    }
   }
 `
