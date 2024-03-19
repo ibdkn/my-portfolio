@@ -5,6 +5,7 @@ import photo from '../../../assets/images/main/main.png'
 import {StyledButton} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {S} from "./Main_Styles"
+import {animateScroll as scroll} from "react-scroll";
 
 export const Main: React.FC = () => {
     return (
@@ -34,7 +35,7 @@ export const Main: React.FC = () => {
                         <S.Description>
                             I craft responsive websites where technologies meet creativity
                         </S.Description>
-                        <StyledButton>Contact me!!</StyledButton>
+                        <StyledButton onClick={() => {scroll.scrollToBottom()}}>Contact me!!</StyledButton>
                     </S.Info>
                     <div>
                         <S.PhotoWrapper>
