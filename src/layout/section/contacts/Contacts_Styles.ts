@@ -26,13 +26,6 @@ const Contacts = styled.section`
       left: calc(50% - 734px);
     }
   }
-  
-  ${Container} > ${FlexWrapper} {
-    @media ${theme.media.desktop} {
-      justify-content: center;
-    }
-  }
-
 `
 
 const Description = styled.p`
