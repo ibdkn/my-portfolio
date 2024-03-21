@@ -1,11 +1,11 @@
 import React from 'react';
-import {Project} from "../../../layout/section/projects/project/Project";
-import skillImage1 from "../../../assets/images/projects/skill-1.png";
-import skillImage2 from "../../../assets/images/projects/skill-2.png";
-import skillImage3 from "../../../assets/images/projects/skill-3.png";
-import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Project} from "../../../section/projects/project/Project";
+import skillImage1 from "../../../../assets/images/projects/skill-1.png";
+import skillImage2 from "../../../../assets/images/projects/skill-2.png";
+import skillImage3 from "../../../../assets/images/projects/skill-3.png";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
-import {StyledTitle} from "../../../components/StyledTitle";
+import {StyledTitle} from "../../../../components/StyledTitle";
 
 const completedAppsData = [
     {

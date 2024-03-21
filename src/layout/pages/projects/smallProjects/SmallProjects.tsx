@@ -1,8 +1,8 @@
 import React from 'react';
-import {Project} from "../../../layout/section/projects/project/Project";
-import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Project} from "../../../section/projects/project/Project";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
-import {StyledTitle} from "../../../components/StyledTitle";
+import {StyledTitle} from "../../../../components/StyledTitle";
 
 const smallProjectsData = [
     {

@@ -1,9 +1,9 @@
 import React from 'react';
-import {Container} from "../../components/Container";
+import {Container} from "../../../components/Container";
 import styled from "styled-components";
 import {CompleteApps} from "./completeApps/CompleteApps";
 import {SmallProjects} from "./smallProjects/SmallProjects";
-import {PageInfo} from "../../components/pages/PageInfo";
+import {PageInfo} from "../../../components/pages/PageInfo";
 
 export const ProjectsPage = () => {
     return (

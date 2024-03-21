@@ -1,9 +1,9 @@
 import React from 'react';
-import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Description} from "../../../components/about/description/Description";
-import {Photo} from "../../../components/about/photo/Photo";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {Description} from "../../../../components/about/description/Description";
+import {Photo} from "../../../../components/about/photo/Photo";
 import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {theme} from "../../../../styles/Theme";
 
 export const Info = () => {
     return (

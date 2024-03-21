@@ -1,9 +1,9 @@
-import {FlexWrapper} from "../../../components/FlexWrapper";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
 import React from "react";
-import {Skill} from "../../../layout/section/skills/skill/Skill";
-import {StyledTitle} from "../../../components/StyledTitle";
-import {theme} from "../../../styles/Theme";
+import {Skill} from "../../../section/skills/skill/Skill";
+import {StyledTitle} from "../../../../components/StyledTitle";
+import {theme} from "../../../../styles/Theme";
 
 const skillsData = [
     {

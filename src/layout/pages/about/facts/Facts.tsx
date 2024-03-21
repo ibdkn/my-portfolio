@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {StyledTitle} from "../../../components/StyledTitle";
+import {StyledTitle} from "../../../../components/StyledTitle";
 import { Fact } from './fact/Fact';
 
 const FactsData = [
