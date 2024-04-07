@@ -53,7 +53,7 @@ export const GlobalStyles = createGlobalStyle `
     
     color: ${theme.colors.primaryColor};
     background-color: ${theme.colors.primaryBg};
-    min-width: 360px;
+    min-width: 375px;
   }
   
   section {

@@ -8,13 +8,16 @@ import {S} from "./Foter_Styles"
 
 const socialItemsData = [
     {
-        iconId: "github"
+        iconId: "github",
+        link: "https://github.com/ibdkn"
     },
     {
-        iconId: "discord"
+        iconId: "discord",
+        link: ""
     },
     {
-        iconId: "instagram"
+        iconId: "instagram",
+        link: "https://www.instagram.com/bdkn_i/"
     },
 ]
 
@@ -37,7 +40,7 @@ export const Footer: React.FC = () => {
                         <FlexWrapper justify={"center"} align={"center"} gap={"8px"}>
                             {socialItemsData.map((socialItem, index) => {
                                 return (
-                                    <SocialLink href={"#"} key={index}>
+                                    <SocialLink href={socialItem.link} key={index}>
                                         <Icon iconId={socialItem.iconId} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
                                     </SocialLink>
                                 )

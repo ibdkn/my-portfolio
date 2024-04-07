@@ -7,24 +7,20 @@ import {S} from "./Skills_Styles"
 
 const skillsData = [
     {
+        title: "Languages",
+        technologies: ["JavaScript", "TypeScript"]
+    },
+    {
         title: "Frameworks",
-        technologies: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"]
+        technologies: ["Angular", "React"]
     },
     {
         title: "Tools",
-        technologies: ["VSCode", "Neovim", "Linux", "Figma", "XFCE", "Arch", "Git", "Font Awesome"]
-    },
-    {
-        title: "Languages",
-        technologies: ["TypeScript", "Lua", "Python", "JavaScript"]
+        technologies: ["WebStorm", "VSCode", "Figma", "Photoshop", "Git"]
     },
     {
         title: "Other",
-        technologies: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"]
-    },
-    {
-        title: "Databases",
-        technologies: ["SQLite", "PostgreSQL", "Mongo"]
+        technologies: ["HTML", "CSS", "SCSS", "LESS", "Gulp", "Grunt", "Webpack", "BEM"]
     },
 ]
 

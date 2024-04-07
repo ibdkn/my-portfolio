@@ -12,7 +12,7 @@ type SocialPropsType = {
 
 export const Social: React.FC<SocialPropsType> = (props: SocialPropsType) => {
     return (
-        <S.Social href={"#"}>
+        <S.Social>
             <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
             <S.Name>{props.text}</S.Name>
         </S.Social>

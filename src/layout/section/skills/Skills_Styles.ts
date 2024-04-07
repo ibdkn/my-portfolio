@@ -29,35 +29,37 @@ const Skills = styled.section`
 `
 
 const SkillsWrapper = styled.div`
-  max-width: 608px;
-  margin-left: auto;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: wrap-reverse;
-  height: 300px;
-
-  @media ${theme.media.tablet} {
-    max-width: 100%;
-    height: auto;
-    flex-direction: row-reverse;
+    max-width: max-content;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    margin: 0;
-  }
+    gap: 10px;
+    //flex-direction: column;
+    //align-items: flex-start;
+    //flex-wrap: wrap-reverse;
+    height: 300px;
+
+    @media ${theme.media.tablet} {
+        max-width: 100%;
+        height: auto;
+        align-items: stretch;
+        justify-content: center;
+        margin: 0;
+    }
 `
 
 // skill
 const Skill = styled.div`
-  max-width: 198px;
-  background-color: ${theme.colors.primaryBg};
-  border: 1px solid ${theme.colors.secondaryColor};
+    max-width: 198px;
+    background-color: ${theme.colors.primaryBg};
+    border: 1px solid ${theme.colors.secondaryColor};
 
-  @media ${theme.media.tablet} {
-  margin-bottom: 0;
-  }
+    @media ${theme.media.tablet} {
+        max-width: 170px;
+        width: 100%;
+        margin-bottom: 0;
+    }
 `
 
 const Title = styled.h3`

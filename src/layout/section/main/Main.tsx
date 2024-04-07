@@ -43,7 +43,7 @@ export const Main: React.FC = () => {
                         </S.PhotoWrapper>
                         <S.SubtextWrapper>
                             <S.Subtext>
-                                Currently working on <span>Portfolio</span>
+                                I am currently learning <span>REACT</span>
                             </S.Subtext>
                         </S.SubtextWrapper>
                     </div>

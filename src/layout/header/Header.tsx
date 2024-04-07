@@ -9,13 +9,16 @@ import {S} from "./Header_Styles"
 
 const socialItemsData = [
     {
-        iconId: "github"
+        iconId: "github",
+        link: "https://github.com/ibdkn"
     },
     {
-        iconId: "telegram"
+        iconId: "telegram",
+        link: "https://t.me/IraKochka"
     },
     {
-        iconId: "instagram"
+        iconId: "instagram",
+        link: "https://www.instagram.com/bdkn_i/"
     },
 ]
 
@@ -35,7 +38,7 @@ export const Header: React.FC = () => {
             <S.SocialFixed>
                 {socialItemsData.map((socialItem, index) => {
                     return (
-                        <SocialLink href={"#"} key={index}>
+                        <SocialLink href={socialItem.link} key={index}>
                             <Icon iconId={socialItem.iconId} width={'32'} height={'32'} viewBox={"0 0 32 32"}/>
                         </SocialLink>
                     )

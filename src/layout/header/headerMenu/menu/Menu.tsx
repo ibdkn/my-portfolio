@@ -35,9 +35,9 @@ export const Menu: React.FC = () => {
                     </S.ListItem>
                 )
             })}
-            <li>
-                <Switch />
-            </li>
+            {/*<li>*/}
+            {/*    <Switch />*/}
+            {/*</li>*/}
         </ul>
     );
 };

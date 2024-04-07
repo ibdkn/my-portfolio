@@ -16,9 +16,9 @@ export const About: React.FC = () => {
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <FlexWrapper direction={"column"}>
                         <Description/>
-                        <StyledButton>
-                            <Movement title={"Read more ~>"}/>
-                        </StyledButton>
+                        {/*<StyledButton>*/}
+                        {/*    <Movement title={"Read more ~>"}/>*/}
+                        {/*</StyledButton>*/}
                     </FlexWrapper>
                    <Photo/>
                 </FlexWrapper>
