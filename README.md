@@ -2,7 +2,7 @@
 
 An adaptive single-page landing site, written using a modern technology stack.
 
-Link: https://ibdkn.github.io/macaroons/
+Link: ibdkn.github.io/my-portfolio/
 
 ## Technologies
 
